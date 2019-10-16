@@ -8,7 +8,7 @@ This website was created using HTML5, CSS3, and SASS. I incorporated industry ap
 
 ## Authors
 
--   **Prashath Cheliyan** - _Portfolio_ - [PurpleBooth](https://prashath.dev/)
+-   **Prashath Cheliyan** - _Portfolio_ - [prashath.dev](https://prashath.dev/)
 
 ## Acknowledgments
 
