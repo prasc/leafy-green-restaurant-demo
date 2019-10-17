@@ -242,9 +242,6 @@ body {
 
 .header-image img {
   width: 100%;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-  /* For IE8 and earlier */
 }
 
 .navbar {
@@ -268,24 +265,206 @@ body {
   height: 100%;
 }
 
-label {
-  margin: 0 40px 0 0;
-  font-size: 5rem;
-  line-height: 70px;
+.hamburger-menu .aside-section {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.hamburger-menu .aside-left {
   display: none;
-  width: 25px;
-  float: right;
-  display: block;
+  width: 40%;
+  left: 0;
+  background-color: #008062;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.hamburger-menu .aside-right {
+  width: 100%;
+  right: 0;
+  background-color: #00b389;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.hamburger-menu .aside-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 150px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.hamburger-menu .aside-content {
+  margin-top: 150px;
+  padding: 0 40px;
+  position: relative;
+  color: #004d3b;
+  text-align: center;
+}
+
+.hamburger-menu .aside-list li {
+  margin-bottom: 20px;
+}
+
+.hamburger-menu .aside-anchor::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background-color: #1affca;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.hamburger-menu .aside-anchor::before {
+  border-radius: 3px;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background-color: #008062;
+  left: 0;
+  height: 3px;
+  z-index: 1;
+  width: 50%;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.hamburger-menu .aside-anchor:hover:before {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.hamburger-menu .aside-anchor {
+  padding-bottom: 7px;
+  color: #004d3b;
+  text-decoration: none;
+  font-size: 30px;
+  position: relative;
+  font-weight: 500;
+}
+
+.hamburger-menu input[type='checkbox'] {
+  display: none;
+}
+
+.hamburger-menu input[type='checkbox']:checked ~ aside .aside-left {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.hamburger-menu input[type='checkbox']:checked ~ aside .aside-right {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.hamburger-menu input[type='checkbox']:checked ~ label .bar {
+  background-color: #fff;
+}
+
+.hamburger-menu input[type='checkbox']:checked ~ label .top {
+  -webkit-transform: translateY(0px) rotateZ(45deg);
+  transform: translateY(0px) rotateZ(45deg);
+}
+
+.hamburger-menu input[type='checkbox']:checked ~ label .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.hamburger-menu input[type='checkbox']:checked ~ label .middle {
+  width: 0;
+}
+
+.hamburger-menu .middle {
+  margin: 0 auto;
+}
+
+.hamburger-menu label {
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: transparent;
   cursor: pointer;
-  color: #00c396;
+  margin: 10px;
+  z-index: 3;
+  position: fixed;
 }
 
-#toggle {
-  display: none;
-}
-
-#toggle:checked + .menu {
+.hamburger-menu .bar {
   display: block;
+  background-color: #00c396;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto;
+  -webkit-transition: background-color 0.4s ease-in, width 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  transition: background-color 0.4s ease-in, width 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  transition: background-color 0.4s ease-in, transform 0.4s ease-in, width 0.4s ease-in;
+  transition: background-color 0.4s ease-in, transform 0.4s ease-in, width 0.4s ease-in, -webkit-transform 0.4s ease-in;
+}
+
+.hamburger-menu h1 {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  font-size: 30px;
+}
+
+.hamburger-menu h1 span {
+  font-size: 20px;
+  display: block;
+}
+
+.hamburger-menu p {
+  font-size: 30px;
+}
+
+.hamburger-menu .button {
+  display: inline-block;
+  background-image: none;
+  border: none;
+  background-color: transparent;
+  padding-bottom: 7px;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  color: #00c396;
+  padding: 7px 50px;
+  border: 2px solid white;
+}
+
+@media (min-width: 992px) {
+  .hamburger-menu h1 {
+    font-size: 40px;
+  }
+  .hamburger-menu .aside-left {
+    display: block;
+  }
+  .hamburger-menu .aside-right {
+    width: 60%;
+  }
 }
 
 .image-container {
