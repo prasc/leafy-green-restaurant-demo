@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="styles/style.css" />
 	</head>
 	<body>
-		<header>
+		<header id="home">
 			<div class="navbar wrapper">
 				<div class="logo">
 					<img
@@ -23,25 +23,42 @@
 			</div>
 			<div class="hamburger-menu">
 				<input type="checkbox" id="myInput" />
-				<label for="myInput">
-					<span class="bar top"></span>
-					<span class="bar middle"></span>
-					<span class="bar bottom"></span>
-				</label>
+				<div id="target">
+					<label for="myInput">
+						<span class="bar top"></span>
+						<span class="bar middle"></span>
+						<span class="bar bottom"></span>
+					</label>
+				</div>
 				<aside>
 					<div class="aside-section aside-left">
 						<div class="aside-content">
-							<p>Some text that will make you click the cta</p>
-							<button class="button">CTA</button>
+							<p>Wanna meet the creator of this cool site?</p>
+							<a
+								href="https://www.linkedin.com/in/prashathc/"
+								class="button"
+								target="blank"
+								>CLICK HERE</a
+							>
 						</div>
 					</div>
 					<div class="aside-section aside-right">
 						<ul class="aside-list">
-							<li><a href="" class="aside-anchor">Home</a></li>
-							<li><a href="" class="aside-anchor">About</a></li>
-							<li><a href="" class="aside-anchor">Contact</a></li>
 							<li>
-								<a href="" class="aside-anchor">Location</a>
+								<a href="#home" class="aside-anchor">Home</a>
+							</li>
+							<li>
+								<a href="#about" class="aside-anchor">About</a>
+							</li>
+							<li>
+								<a href="#contact" class="aside-anchor"
+									>Contact</a
+								>
+							</li>
+							<li>
+								<a href="#location" class="aside-anchor"
+									>Location</a
+								>
 							</li>
 						</ul>
 					</div>
@@ -55,7 +72,7 @@
 			</div>
 		</header>
 		<section class="wrapper restaurant-info">
-			<p>
+			<p id="about">
 				Founded in 2010, Leafy Greens is a destination for innovative
 				<em>plant-based cuisine</em> in Toronto.
 			</p>
@@ -69,8 +86,8 @@
 		<main>
 			<div class="image-container">
 				<img src="/assets/image-1.jpg" alt="" />
-				<img src="/assets/image-2.jpg" alt="" />
-				<img src="/assets/image-3.jpg" alt="" />
+				<img class="right slide-in" src="/assets/image-2.jpg" alt="" />
+				<img class="left slide-in" src="/assets/image-3.jpg" alt="" />
 				<img src="/assets/image-4.jpg" alt="" />
 			</div>
 			<section class="wrapper restaurant-info">
@@ -87,7 +104,7 @@
 					satifised. Eating should always be this fun.
 				</p>
 			</section>
-			<div class="location">
+			<div class="location" id="location">
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2258149374816!2d-79.38128758463074!3d43.64346996107806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb2b5935bf09%3A0x5842d0e7d5669410!2sScotiabank%20Arena!5e0!3m2!1sen!2sca!4v1571264261069!5m2!1sen!2sca"
 					width="600"
@@ -98,7 +115,7 @@
 				></iframe>
 			</div>
 		</main>
-		<footer>
+		<footer id="contact">
 			<div class="wrapper footer-links">
 				<div>
 					<h3>Contact Us</h3>
@@ -115,8 +132,10 @@
 				</div>
 				<div>
 					<h3>Social</h3>
-					<p>Twitter</p>
-					<p>Linkedin</p>
+					<a href="https://twitter.com/prashathc23"><p>Twitter</p></a>
+					<a href="https://www.linkedin.com/in/prashathc/"
+						><p>Linkedin</p></a
+					>
 				</div>
 			</div>
 			<div class="footer-credits">
