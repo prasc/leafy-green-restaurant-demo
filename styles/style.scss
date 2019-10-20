@@ -23,6 +23,7 @@ body {
 	max-width: 1280px;
 	width: 100%;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .wrapper {
@@ -275,6 +276,7 @@ body {
 	}
 
 	img {
+		z-index: -100;
 		width: 50%;
 		height: 500px;
 		@media (max-width: 900px) {
@@ -294,6 +296,9 @@ body {
 	margin: 10% auto;
 	font-size: 1.8rem;
 	text-align: center;
+	p {
+		line-height: 3.5rem;
+	}
 }
 
 // X) LOCATION
